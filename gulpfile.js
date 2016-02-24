@@ -4,8 +4,9 @@
 
 
 var gulp = require('gulp');
-
+var program=require('commander');
 var connect=require('gulp-connect');
+require('es6-shim');
 gulp.task('server:assets', function () {
 
 
@@ -46,7 +47,25 @@ gulp.task('server:assets:production',function(){
 
 
 gulp.task('build:js', ['build:js:library'],function () {
+    program.version('0.0.1')
+    .option('-e,--entry <items>','entry files',function(val){
+            return val.split(',');
+        })
+    .parse(process.argv);
+
+
     var webpackProductionConfig = require('./webpack.config.production.js');
+    if(process.argv.indexOf('build:js:library')!=-1&&program.entry)
+    {
+            for(var key in webpackProductionConfig.entry){
+                if(program.entry.indexOf(key)==-1)
+                {
+
+                    delete webpackProductionConfig.entry[key];
+                }
+            }
+
+    }
     var webpack = require('webpack');
     var uglify = require('gulp-uglify'),
         sourceMaps = require('gulp-sourcemaps'),
@@ -68,7 +87,27 @@ gulp.task('build:js', ['build:js:library'],function () {
 });
 
 gulp.task('build:js:library', function () {
+
+    program.version('0.0.1')
+        .option('-e,--entry <items>','entry files',function(val){
+            return val.split(',');
+        })
+        .parse(process.argv);
+
     var webpackProductionConfig = require('./webpack.config.library.production.js');
+    if(process.argv.indexOf('build:js:library')!=-1&&program.entry)
+    {
+
+        for(var key in webpackProductionConfig.entry){
+            if(program.entry.indexOf(key)==-1)
+            {
+
+                delete webpackProductionConfig.entry[key];
+            }
+        }
+
+    }
+
     var webpack = require('webpack');
     var uglify = require('gulp-uglify'),
         sourceMaps = require('gulp-sourcemaps'),

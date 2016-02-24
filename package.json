@@ -30,6 +30,7 @@
     "jquery": "^1.11.3"
   },
   "devDependencies": {
+    "commander": "^2.9.0",
     "gulp": "^3.9.0",
     "gulp-connect": "^2.3.1",
     "gulp-rename": "^1.2.2",

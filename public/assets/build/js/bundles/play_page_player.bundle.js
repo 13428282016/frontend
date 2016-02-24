@@ -390,7 +390,7 @@ webpackJsonp([1],[
 
 		    getObjNums:function(){
 
-		        console.log(this.objNums);
+
 		        return this.__base();
 		    }
 		});
