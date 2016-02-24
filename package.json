@@ -1,0 +1,43 @@
+{
+  "name": "player_page",
+  "version": "1.0.0",
+  "description": "webpack+npm+gulp+web+frotend+commonjs",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/13428282016/frontend.git"
+  },
+  "keywords": [
+    "webpack",
+    "npm",
+    "web",
+    "gulp",
+    "frotend"
+  ],
+  "author": "wmj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/13428282016/frontend/issues"
+  },
+  "homepage": "https://github.com/13428282016/frontend#readme",
+  "dependencies": {
+    "es6-shim": "^0.34.4",
+    "express": "^4.13.4",
+    "inherit": "^2.2.3",
+    "jquery": "^1.11.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.3.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.2",
+    "webpack": "^1.12.12",
+    "webpack-dev-middleware": "^1.5.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-hot-middleware": "^2.6.4"
+  }
+}
