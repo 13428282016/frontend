@@ -6,8 +6,8 @@
 	else if(typeof exports === 'object')
 		exports["h5_player"] = factory(require("inherit"), require("library/player"));
 	else
-		root["h5_player"] = factory(root["inherit"], root["library/player"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__) {
+		root["h5_player"] = factory(root["inherit"], root["player"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_2__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -58,19 +58,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 1 */,
+/* 1 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
+
+/***/ },
 /* 2 */
 /***/ function(module, exports) {
 
 	module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
 
 /***/ },
-/* 3 */
-/***/ function(module, exports) {
-
-	module.exports = __WEBPACK_EXTERNAL_MODULE_3__;
-
-/***/ },
+/* 3 */,
 /* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -81,8 +81,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * Created by wmj on 2016/2/24.
 	 */
 
-	var inherit=__webpack_require__(2);
-	var Player=__webpack_require__(3);
+	var inherit=__webpack_require__(1);
+	var Player=__webpack_require__(2);
 	var H5Player=inherit(Player,{
 
 	    __constructor:function(){

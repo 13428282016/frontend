@@ -7,7 +7,7 @@
 		exports["player"] = factory(require("inherit"));
 	else
 		root["player"] = factory(root["inherit"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_2__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_1__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -58,13 +58,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 1 */,
-/* 2 */
+/* 1 */
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
+	module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
 
 /***/ },
+/* 2 */,
 /* 3 */,
 /* 4 */,
 /* 5 */
@@ -74,7 +74,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * Created by wmj on 2016/2/24.
 	 */
 
-	var inherit=__webpack_require__(2);
+	var inherit=__webpack_require__(1);
 
 	var Player=inherit({
 	   __constructor:function(){

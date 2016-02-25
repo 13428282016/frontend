@@ -1,44 +1,18 @@
-webpackJsonp([3],{
+webpackJsonp([2],{
 
-/***/ 0:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(9);
-
-
-/***/ },
-
-/***/ 9:
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Created by wmj on 2016/2/24.
-	 */
-	var $=__webpack_require__(1);
-
-	var Statistics=__webpack_require__(10);
-
-	var statistics= new Statistics();
-
-	statistics.vv();
-	statistics.pv()
-	console.log(Statistics.getObjNums());
-
-/***/ },
-
-/***/ 10:
+/***/ 8:
 /***/ function(module, exports, __webpack_require__) {
 
 	(function webpackUniversalModuleDefinition(root, factory) {
 		if(true)
-			module.exports = factory(__webpack_require__(2));
+			module.exports = factory(__webpack_require__(2), __webpack_require__(5));
 		else if(typeof define === 'function' && define.amd)
-			define(["inherit"], factory);
+			define(["inherit", "library/player"], factory);
 		else if(typeof exports === 'object')
-			exports["statistics"] = factory(require("inherit"));
+			exports["h5_player"] = factory(require("inherit"), require("library/player"));
 		else
-			root["statistics"] = factory(root["inherit"]);
-	})(this, function(__WEBPACK_EXTERNAL_MODULE_1__) {
+			root["h5_player"] = factory(root["inherit"], root["player"]);
+	})(this, function(__WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_2__) {
 	return /******/ (function(modules) { // webpackBootstrap
 	/******/ 	// The module cache
 	/******/ 	var installedModules = {};
@@ -85,7 +59,7 @@ webpackJsonp([3],{
 	/* 0 */
 	/***/ function(module, exports, __webpack_require__) {
 
-		module.exports = __webpack_require__(6);
+		module.exports = __webpack_require__(4);
 
 
 	/***/ },
@@ -95,43 +69,59 @@ webpackJsonp([3],{
 		module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
 
 	/***/ },
-	/* 2 */,
+	/* 2 */
+	/***/ function(module, exports) {
+
+		module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
+
+	/***/ },
 	/* 3 */,
-	/* 4 */,
-	/* 5 */,
-	/* 6 */
+	/* 4 */
 	/***/ function(module, exports, __webpack_require__) {
 
 		/**
 		 * Created by wmj on 2016/2/24.
 		 */
+		/**
+		 * Created by wmj on 2016/2/24.
+		 */
 
 		var inherit=__webpack_require__(1);
+		var Player=__webpack_require__(2);
+		var H5Player=inherit(Player,{
 
-		var Statistics=inherit({
 		    __constructor:function(){
 
-		        console.log('a Statistics Object has been created!');
-		        this.__self.objNums++;
+		        this.__base();
+		        console.log('a H5Player Object has been created!');
 		    },
-		    pv:function(){
-		        console.log('trigger a pv  statistics!');
+		    play:function(){
+		        this.__base();
+		        console.log('a H5Player start play!');
 
 		    },
-		    vv:function(){
-		        console.log('trigger a vv statistics!');
+		    pause:function(){
+		        this.__base();
+		        console.log('a H5Player pause play!');
 		    },
+		    stop:function(){
+		        this.__base();
+		        console.log('a H5Player stop play!');
+		    },
+		    resume:function(){
+		        this.__base();
+		        console.log('a H5Player resume play!');
+		    }
+
 
 		},{
-		    objNums:0,
+
 		    getObjNums:function(){
-		        return this.objNums;
+		        return this.__base();
 		    }
 		});
 
-		module.exports=Statistics;
-
-
+		module.exports=H5Player;
 
 	/***/ }
 	/******/ ])
